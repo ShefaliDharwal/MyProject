@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: mygame
-          image: shefalidharwal17/project
+          image: shefalidharwal17/project:{{ .Values.image.tag }}
           ports:
             - containerPort: 80
               protocol: TCP
