@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mygame
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      type: mygame
+  template:
+    metadata:
+      labels:
+        type: mygame
+    spec:
+      containers:
+        - name: mygame
+          image: shefalidharwal17/project
+          ports:
+            - containerPort: 80
+              protocol: TCP

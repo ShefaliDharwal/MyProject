@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mygame
+spec:
+  type: NodePort
+  selector:
+    type: mygame
+  ports:
+    - port: 80
+      targetPort: 80
