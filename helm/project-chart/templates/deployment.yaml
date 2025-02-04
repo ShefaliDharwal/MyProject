@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mygame
+  name: game
 spec:
   replicas: 5
   selector:
     matchLabels:
-      type: mygame
+      type: game
   template:
     metadata:
       labels:
-        type: mygame
+        type: game
     spec:
       containers:
-        - name: mygame
+        - name: game
           image: shefalidharwal17/project:{{ .Values.image.tag }}
           ports:
             - containerPort: 80
